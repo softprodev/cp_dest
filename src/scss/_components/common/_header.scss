@@ -1,0 +1,215 @@
+// HEADER :: START
+
+.header {
+  z-index: 995;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  &.is-fixed {
+    &:after {
+      opacity: 1;
+      visibility: visible;
+      @include transition(opacity, visibility);
+    }
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:before {
+    z-index: 1;
+    background-image: url('../img/img-header-path-line@2x.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+  }
+
+  &:after {
+    z-index: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-image: url('../img/img-bg@2x.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include transition(opacity, visibility);
+  }
+
+  &__wrapper {
+    z-index: 2;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 105px;
+    @include adaptive(767) {
+      justify-content: center;
+      height: 85px;
+    }
+
+    &-left,
+    &-right {
+      flex: 1;
+      min-width: 1px;
+      max-width: 100%;
+    }
+
+    &-left {
+      @include adaptive(1023) {
+        display: none;
+      }
+    }
+
+    &-right {
+      display: flex;
+      justify-content: flex-end;
+      @include adaptive(1023) {
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      > div {
+        &:nth-of-type(1) {
+          display: none;
+          @include adaptive(1023) {
+            display: flex;
+          }
+        }
+        &:nth-of-type(2) {
+          display: none;
+          @include adaptive(1023) {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+
+    .c-btn {
+      width: 100%;
+      max-width: 150px;
+      min-width: 150px;
+      height: 45px;
+      @include adaptive(767) {
+        max-width: 125px;
+        min-width: 125px;
+        height: 35px;
+      }
+
+      &:not(:last-of-type) {
+        margin-right: 15px;
+      }
+
+      &:hover {
+        span {
+          opacity: 1;
+        }
+      }
+
+      &__wrapper {
+        @include adaptive(767) {
+          display: none;
+        }
+      }
+
+      u {
+        font-size: 14px;
+        color: #ffffff;
+        @include adaptive(767) {
+          font-size: 13px;
+        }
+
+        .icon-font {
+          margin-right: 10px;
+          color: #FF511C;
+        }
+      }
+
+      span {
+        opacity: 0;
+        font-size: 14px;
+        color: #ffffff;
+        @include adaptive(767) {
+          font-size: 13px;
+        }
+
+        .icon-font {
+          margin-right: 10px;
+          color: #FF511C;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    @include adaptive(1023) {
+      display: none;
+    }
+
+    a {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-right: 30px;
+      font-size: 14px;
+      line-height: 2;
+      color: #ffffff;
+      font-weight: 700;
+      text-transform: uppercase;
+      @include transition(color);
+
+      &:hover {
+        color: #ff511c;
+        @include transition(color);
+      }
+
+      &.is-active {
+        &:after {
+          opacity: 1;
+          visibility: visible;
+          @include transition(opacity, visibility);
+        }
+      }
+
+      &:after {
+        content: '';
+        opacity: 0;
+        visibility: visible;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../img/path-line-horizontal@2x.png');
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: contain;
+        @include transition(opacity, visibility);
+      }
+    }
+  }
+
+  &__logo {
+    display: block;
+    height: auto;
+    @include adaptive(1023) {
+      max-width: 225px;
+    }
+    @include adaptive(767) {
+      max-width: 125px;
+    }
+  }
+}
+
+// HEADER :: END

@@ -1,0 +1,28 @@
+// SECTION :: START
+
+section#welcome.welcome
+  .c-grid
+
+    img.welcome__logo(src="img/logo.png" srcset="img/logo@2x.png 2x" alt="")
+
+    .welcome__visual
+      div
+      div
+
+    .welcome__wrapper#welcomeAnimation
+      img#welcomeAnimationImg1.welcome__wrapper-corner(src="img/img-welcome-visual-top-left.png" srcset="img/img-welcome-visual-top-left@2x.png 2x" alt="")
+      img#welcomeAnimationImg2.welcome__wrapper-elipse(src="img/img-welcome-visual-elipse.png" srcset="img/img-welcome-visual-elipse@2x.png 2x" alt="")
+      img#welcomeAnimationImg3.welcome__wrapper-fire(src="img/img-welcome-fire.png" srcset="img/img-welcome-fire@2x.png 2x" alt="")
+      img#welcomeAnimationImg4.welcome__wrapper-man(src="img/img-welcome-man.png" srcset="img/img-welcome-man@2x.png 2x" alt="")
+
+      div
+
+        h1.welcome__title.c-title.c-title--small.wow.animate__animated.animate__fadeInUp(data-wow-duration="1.25s")!= "welcome to <span>the club</span>"
+        p.welcome__desc.c-desc.wow.animate__animated.animate__fadeInUp(data-wow-duration="1.25s")!= "CP represents the first fitness brand that is merging into the digital world. <strong>The vision is ultimately a community governed brand that physically, mentally & financially enrichs it’s tokenholders. </strong>The first of many benefits is access to Club Physique where token holders can vote on future flavors, taste test future R&D creations and access a 20% lifetime discount but the road map gets even more exciting."
+
+        .welcome__btn.c-btn__wrapper.wow.animate__animated.animate__fadeInUp(data-wow-duration="1.25s")
+          a.c-btn(href="#")
+            u.c-btn__mask Call to Action
+            span Call to Action
+
+// SECTION :: END

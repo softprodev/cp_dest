@@ -1,0 +1,32 @@
+include ../utilities/_mixin
+
+doctype html
+html(lang="en")
+
+  head
+    include _head
+
+  body
+
+
+    block header
+      include ../components/common/_header
+
+    block content
+
+    block footer
+      include ../components/common/_footer
+
+    block menu
+      include ../components/common/menu
+
+    #overlay.overlay
+
+    // CURSOR
+    .cursor-dot-outline
+    .cursor-dot
+    // CURSOR :: end
+
+
+  block script
+    include _script

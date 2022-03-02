@@ -1,0 +1,167 @@
+// SECTION :: START
+
+.welcome {
+  overflow: hidden;
+  position: relative;
+  top: -100px;
+  padding-top: 100px;
+  @include adaptive(767) {
+    top: 0;
+    padding-top: 0;
+  }
+
+  .c-grid {
+    position: relative;
+  }
+
+  &__visual {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    > div {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      mix-blend-mode: color-dodge;
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: contain;
+
+      &:nth-of-type(1) {
+        left: 0;
+        transform: translateX(-50%);
+        background-image: url('../img/togrther-flame-left@2x.png');
+      }
+      &:nth-of-type(2) {
+        right: 0;
+        transform: translateX(50%);
+        background-image: url('../img/togrther-flame-right@2x.png');
+      }
+    }
+  }
+
+  &__wrapper {
+    z-index: 2;
+    overflow: hidden;
+    position: relative;
+    padding: 100px 100px 65px;
+    background-color: #202020;
+    clip-path: polygon(0 0, 30% 0, 33% 8%, 67% 8%, 70% 0, 100% 0, 100% 100%, 0 100%);
+    @include adaptive(1279) {
+      padding: 75px 55px 55px;
+    }
+    @include adaptive(1023) {
+      padding: 75px 55px;
+      clip-path: unset;
+    }
+    @include adaptive(767) {
+      left: -15px;
+      width: calc(100% + 30px);
+      padding: 35px 15px;
+      text-align: center;
+    }
+
+    > div {
+      width: 100%;
+      max-width: 60%;
+      @include adaptive(1023) {
+        max-width: 100%;
+      }
+    }
+
+    &-corner {
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      max-width: 100%;
+      height: auto;
+      mix-blend-mode: exclusion;
+      @include adaptive(767) {
+        display: none;
+      }
+    }
+
+    &-elipse,
+    &-fire,
+    &-man {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      max-width: 100%;
+      height: auto;
+      @include adaptive(1023) {
+        display: none;
+      }
+    }
+
+    &-fire,
+    &-man {
+      height: 100%;
+      object-position: center;
+    }
+
+    &-fire {
+      object-fit: cover;
+      mix-blend-mode: lighten;
+    }
+
+    &-man {
+      bottom: -10px;
+      height: calc(100% + 20px);
+      object-fit: contain;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-75%);
+    @include adaptive(1023) {
+      display: none;
+    }
+  }
+
+  &__title {
+    padding-bottom: 35px;
+    @include adaptive(767) {
+      padding-bottom: 30px;
+
+      span {
+        display: block;
+      }
+    }
+  }
+
+  &__desc {
+    padding-bottom: 45px;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.7;
+    @include adaptive(767) {
+      padding-bottom: 30px;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+  }
+
+  &__btn {
+    @include adaptive(767) {
+      justify-content: center;
+    }
+  }
+}
+
+// SECTION :: END

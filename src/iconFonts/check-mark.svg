@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15.75" height="15.75" viewBox="0 0 15.75 15.75">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff511c;
+      }
+    </style>
+  </defs>
+  <title>check-mark-small-orange</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <path class="cls-1" d="M7.875,0A7.875,7.875,0,1,0,15.75,7.875,7.906,7.906,0,0,0,7.875,0ZM6.922,11.457,3.473,8.008l1.3-1.3,2.2,2.2,4.425-4.022L12.649,6.25Z"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,33 @@
+////
+/// @group  Extend
+////
+
+
+// GRID
+%grid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+// GRID :: end
+
+
+// IMAGE
+%imageResCoverAbs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+// IMAGE :: end
+
+
+// FONT
+//%fontCheddarGothicSans {font-family: 'cheddargothicsans', sans-serif;}
+//%fontCheddarGothicSansIt {font-family: 'cheddargothicsans-italic', sans-serif;font-style: italic;}
+//%fontCheddarGothicSerif {font-family: 'cheddargothicserif', sans-serif;}
+//%fontCheddarGothicSerifIt {font-family: 'cheddargothicserif-italic', sans-serif;font-style: italic;}
+// FONT :: end

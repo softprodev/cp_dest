@@ -1,0 +1,52 @@
+/// @include mixinFontFace("JournalRegular", "-Bold", "../fonts/", normal, otf eot woff2 woff ttf svg);
+/// ===============
+
+//@include mixinFontFace("cheddargothicsans", "", "../fonts/", normal, woff2 woff ttf);
+//@include mixinFontFace("cheddargothicsans", "-italic", "../fonts/", normal, woff2 woff ttf);
+//@include mixinFontFace("cheddargothicserif", "", "../fonts/", normal, woff2 woff ttf);
+
+@font-face {
+  font-family: 'CheddarGothicSansItalic';
+  src: url('../fonts/CheddarGothicSans-Italic.woff2') format('woff2'),
+  url('../fonts/CheddarGothicSans-Italic.woff') format('woff'),
+  url('../fonts/CheddarGothicSans-Italic.ttf') format('truetype'),
+  url('../fonts/CheddarGothicSans-Italic.svg#CheddarGothicSans-Italic') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CheddarGothicSans';
+  src: url('../fonts/CheddarGothicSans.woff2') format('woff2'),
+  url('../fonts/CheddarGothicSans.woff') format('woff'),
+  url('../fonts/CheddarGothicSans.ttf') format('truetype'),
+  url('../fonts/CheddarGothicSans.svg#CheddarGothicSans') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CheddarGothicSerifItalic';
+  src: url('../fonts/CheddarGothicSerif-Italic.woff2') format('woff2'),
+  url('../fonts/CheddarGothicSerif-Italic.woff') format('woff'),
+  url('../fonts/CheddarGothicSerif-Italic.ttf') format('truetype'),
+  url('../fonts/CheddarGothicSerif-Italic.svg#CheddarGothicSerif-Italic') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CheddarGothicSerif';
+  src: url('../fonts/CheddarGothicSerif.woff2') format('woff2'),
+  url('../fonts/CheddarGothicSerif.woff') format('woff'),
+  url('../fonts/CheddarGothicSerif.ttf') format('truetype'),
+  url('../fonts/CheddarGothicSerif.svg#CheddarGothicSerif') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+

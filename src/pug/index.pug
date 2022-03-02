@@ -1,0 +1,16 @@
+---
+title: Club Phyzique
+
+pageClassName: p-home
+---
+extends shared/_layout
+
+block footer
+block content
+  main.main.main--start(class!= pageClassName)
+
+    include components/welcome
+    include components/roadmap
+    include components/club
+    include components/together
+    include components/benefits
