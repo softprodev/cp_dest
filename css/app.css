@@ -4,11 +4,6 @@
   margin-left: auto;
 }
 
-.together h3, .together h2, .roadmap__block-year, .c-title {
-  font-family: "CheddarGothicSans-Italic";
-  font-style: italic;
-}
-
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
@@ -164,52 +159,32 @@
 }
 
 @font-face {
+  font-family: "CheddarGothicSansItalic";
+  src: url("../fonts/CheddarGothicSans-Italic.woff2") format("woff2"), url("../fonts/CheddarGothicSans-Italic.woff") format("woff"), url("../fonts/CheddarGothicSans-Italic.ttf") format("truetype"), url("../fonts/CheddarGothicSans-Italic.svg#CheddarGothicSans-Italic") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: "CheddarGothicSans";
   src: url("../fonts/CheddarGothicSans.woff2") format("woff2"), url("../fonts/CheddarGothicSans.woff") format("woff"), url("../fonts/CheddarGothicSans.ttf") format("truetype"), url("../fonts/CheddarGothicSans.svg#CheddarGothicSans") format("svg");
-  font-style: normal;
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: "CheddarGothicSans";
-  src: url("../fonts/CheddarGothicSans-Italic.woff2") format("woff2"), url("../fonts/CheddarGothicSans-Italic.woff") format("woff"), url("../fonts/CheddarGothicSans-Italic.ttf") format("truetype"), url("../fonts/CheddarGothicSans-Italic.svg#CheddarGothicSans") format("svg");
+  font-family: "CheddarGothicSerifItalic";
+  src: url("../fonts/CheddarGothicSerif-Italic.woff2") format("woff2"), url("../fonts/CheddarGothicSerif-Italic.woff") format("woff"), url("../fonts/CheddarGothicSerif-Italic.ttf") format("truetype"), url("../fonts/CheddarGothicSerif-Italic.svg#CheddarGothicSerif-Italic") format("svg");
+  font-weight: 500;
   font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: "CheddarGothicStencil";
-  src: url("../fonts/CheddarGothicStencil.woff2") format("woff2"), url("../fonts/CheddarGothicStencil.woff") format("woff"), url("../fonts/CheddarGothicStencil.ttf") format("truetype"), url("../fonts/CheddarGothicStencil.svg#CheddarGothicStencil") format("svg");
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: "CheddarGothicStencil";
-  src: url("../fonts/CheddarGothicStencil-Italic.woff2") format("woff2"), url("../fonts/CheddarGothicStencil-Italic.woff") format("woff"), url("../fonts/CheddarGothicStencil-Italic.ttf") format("truetype"), url("../fonts/CheddarGothicStencil-Italic.svg#CheddarGothicStencil") format("svg");
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: "CheddarGothicSlab";
-  src: url("../fonts/CheddarGothicSlab.woff2") format("woff2"), url("../fonts/CheddarGothicSlab.woff") format("woff"), url("../fonts/CheddarGothicSlab.ttf") format("truetype"), url("../fonts/CheddarGothicSlab.svg#CheddarGothicSlab") format("svg");
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: "CheddarGothicSlab";
-  src: url("../fonts/CheddarGothicSlab-Italic.woff2") format("woff2"), url("../fonts/CheddarGothicSlab-Italic.woff") format("woff"), url("../fonts/CheddarGothicSlab-Italic.ttf") format("truetype"), url("../fonts/CheddarGothicSlab-Italic.svg#CheddarGothicSlab") format("svg");
-  font-style: normal;
-  font-weight: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "CheddarGothicSerif";
   src: url("../fonts/CheddarGothicSerif.woff2") format("woff2"), url("../fonts/CheddarGothicSerif.woff") format("woff"), url("../fonts/CheddarGothicSerif.ttf") format("truetype"), url("../fonts/CheddarGothicSerif.svg#CheddarGothicSerif") format("svg");
-  font-style: normal;
   font-weight: normal;
-}
-@font-face {
-  font-family: "CheddarGothicSerif";
-  src: url("../fonts/CheddarGothicSerif-Italic.woff2") format("woff2"), url("../fonts/CheddarGothicSerif-Italic.woff") format("woff"), url("../fonts/CheddarGothicSerif-Italic.ttf") format("truetype"), url("../fonts/CheddarGothicSerif-Italic.svg#CheddarGothicSerif") format("svg");
   font-style: normal;
-  font-weight: normal;
+  font-display: swap;
 }
 html,
 body {
@@ -370,10 +345,6 @@ picture {
 }
 
 /* CUSTOM CURSOR */
-* {
-  cursor: none !important;
-}
-
 #overlay {
   z-index: 990;
   overflow: hidden;
@@ -430,6 +401,7 @@ picture {
   color: #ffffff;
   line-height: 1.1;
   letter-spacing: 10px;
+  font-family: "CheddarGothicSansItalic", sans-serif;
   text-shadow: 3px 3px 0px #131313, 5px 5px 0px #4a4a4a;
 }
 @media screen and (max-width: 1439px) {
@@ -1332,6 +1304,7 @@ picture {
   max-width: 100%;
 }
 .roadmap__block-year {
+  font-family: "CheddarGothicSansItalic";
   font-size: 80px;
   color: #5c5c5c;
   line-height: 1.2;
@@ -1541,7 +1514,7 @@ picture {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1023px) {
   .together {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -1804,6 +1777,7 @@ picture {
 .together h2 {
   z-index: -1;
   position: relative;
+  font-family: "CheddarGothicSansItalic";
   font-size: 45px;
   color: #ffffff;
   line-height: 1.2;
@@ -1822,6 +1796,7 @@ picture {
 .together h3 {
   z-index: -1;
   position: relative;
+  font-family: "CheddarGothicSansItalic";
   font-size: 180px;
   color: #ffffff;
   line-height: 1;
