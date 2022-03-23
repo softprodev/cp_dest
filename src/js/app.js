@@ -294,6 +294,43 @@ window.addEventListener('load', (ev) => {
   wowScrollAnimation();
 
 
+  let daysBox = document.querySelector(".days");
+  let hrsBox = document.querySelector(".hrs");
+  let minBox = document.querySelector(".min");
+  let secBox = document.querySelector(".sec");
+  let countDownDate	= new Date("Mar 22, 2022 23:47:00").getTime();
+
+  // COUNT DOWN FUNCTION
+  let x = setInterval(function() {
+
+    // GET DATE
+    let now = new Date().getTime();
+
+    // TIME BETWEEN NOW AND DATE
+    let distance = countDownDate - now;
+
+    // CALCULATION TIME
+    let days 	= Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours 	= Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes	= Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds	= Math.floor((distance % (1000 * 60)) / 1000);
+
+    daysBox.innerHTML	= (days < 10)?'0' + days+"<span>Days</span>":days+"<span>Days</span>";
+    hrsBox.innerHTML 	= (hours < 10)?'0'+hours+"<span>Hrs</span>":hours+"<span>Hrs</span>";
+    minBox.innerHTML 	= (minutes < 10)?'0'+minutes+"<span>Min</span>":minutes+"<span>Min</span>";
+    secBox.innerHTML 	= (seconds < 10)?'0'+seconds+"<span>Sec</span>":seconds+"<span>Sec</span>";
+
+    // IF FINISH
+    if (distance < 0) {
+      clearInterval(x);
+
+      document.querySelectorAll('.get__footer > div')[2].style.display = 'none';
+      document.querySelector('.get__footer .c-btn').removeAttribute('disabled');
+
+    }
+  }, 1000);
+
+
 }, false);
 
 

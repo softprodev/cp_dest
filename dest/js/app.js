@@ -355,6 +355,33 @@ window.addEventListener('load', function (ev) {
   customCursor();
   hamburgerMenu();
   wowScrollAnimation();
+  var daysBox = document.querySelector(".days");
+  var hrsBox = document.querySelector(".hrs");
+  var minBox = document.querySelector(".min");
+  var secBox = document.querySelector(".sec");
+  var countDownDate = new Date("Mar 22, 2022 23:47:00").getTime(); // COUNT DOWN FUNCTION
+
+  var x = setInterval(function () {
+    // GET DATE
+    var now = new Date().getTime(); // TIME BETWEEN NOW AND DATE
+
+    var distance = countDownDate - now; // CALCULATION TIME
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor(distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+    var minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
+    var seconds = Math.floor(distance % (1000 * 60) / 1000);
+    daysBox.innerHTML = days < 10 ? '0' + days + "<span>Days</span>" : days + "<span>Days</span>";
+    hrsBox.innerHTML = hours < 10 ? '0' + hours + "<span>Hrs</span>" : hours + "<span>Hrs</span>";
+    minBox.innerHTML = minutes < 10 ? '0' + minutes + "<span>Min</span>" : minutes + "<span>Min</span>";
+    secBox.innerHTML = seconds < 10 ? '0' + seconds + "<span>Sec</span>" : seconds + "<span>Sec</span>"; // IF FINISH
+
+    if (distance < 0) {
+      clearInterval(x);
+      document.querySelectorAll('.get__footer > div')[2].style.display = 'none';
+      document.querySelector('.get__footer .c-btn').removeAttribute('disabled');
+    }
+  }, 1000);
 }, false); // EVENT LISTENER - SCROLL
 // ========================================
 

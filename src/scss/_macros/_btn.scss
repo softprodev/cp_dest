@@ -21,6 +21,17 @@
     height: 55px;
   }
 
+  &[disabled] {
+    pointer-events: none;
+    border-color: #1c1c1c;
+    box-shadow: none;
+
+    span {
+      background-color: #1c1c1c;
+      color: #545454;
+    }
+  }
+
   &:hover {
     box-shadow: 0px 5px 21px 0px rgba(255, 81, 28, 0);
     @include transition(box-shadow);
